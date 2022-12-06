@@ -21,3 +21,5 @@ jobs:
             terraform init
             terraform plan -input=false
             terraform apply -auto-approve
+          env:
+            DB_PASSWORD: ${DB_PASSWORD} # this needs to match up with a terraform input variable "db_password"!
